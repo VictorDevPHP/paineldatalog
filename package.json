@@ -14,6 +14,10 @@
         "vite": "^4.3.8"
     },
     "dependencies": {
-        "admin-lte": "3.2"
+        "@fortawesome/fontawesome-free": "^6.4.0",
+        "admin-lte": "3.2",
+        "bootstrap-css": "^4.0.0-alpha.5",
+        "bootstrap-icons": "^1.10.5",
+        "material-icons": "^1.13.7"
     }
 }

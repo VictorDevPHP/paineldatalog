@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EquipamentoController;
+use App\Http\Controllers\LogeventController;
+use App\Http\Controllers\DatalogController;
+use App\Http\Controllers\VisaoGeralController;
+use App\Http\Controllers\PainelconfController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +22,22 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/pages', function () {
-    return view('pages');
-});
+// rotas da guia de navegação----------------------------------------------------------------
+Route::get('/nav/equipamentos', [EquipamentoController::class, 'index'])->name('equipamentos');
+
+Route::get('/nav/logevents', [LogeventController::class, 'index'])->name('logevents');
+
+Route::get('/nav/datalogs', [DatalogController::class, 'index'])->name('datalogs');
+
+Route::get('/nav/visaogeral', [VisaoGeralController::class, 'index'])->name('visaogeral');
+
+Route::get('/nav/painelconf', [PainelconfController::class, 'index'])->name('painelconf');
+
+Route::post('/nav/equipamentos', [EquipamentoController::class, 'store'])->name('equipamentos.store');
+
+Route::get('/equipamentos/nao-comunicantes', [EquipamentosController::class, 'getNaoComunicantes'])
+    ->name('equipamentos.naoComunicantes');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
-

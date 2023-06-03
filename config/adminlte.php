@@ -313,13 +313,35 @@ return [
         ],
         
         [
-            'text'        => 'pages',
-            'url'         => 'pages',
-            'icon'        => 'far fa-fw fa-file',
+            'text'        => 'Equipamentos',
+            'url'         => 'nav/equipamentos',
+            'icon'        => 'fas fa-charging-station',
             'label_color' => 'success',
         ],
 
-        ['header' => 'account_settings'],
+        [
+            'text'        => 'Painel de Configuração',
+            'url'         => 'nav/painelconf',
+            'icon'        => 'fas fa-charging-station',
+            'label_color' => 'success',
+        ],
+       
+        ['header' => 'RELATORIOS'],
+
+        [
+            'text'        => 'Log De Eventos',
+            'url'         => 'nav/logevents',
+            'icon'        => 'fas fa-fw fa-share',
+            'label_color' => 'success',
+        ],
+
+        [
+            'text'        => 'Data Log',
+            'url'         => 'nav/datalogs',
+            'icon'        => 'fas fa-fw fa-share',
+            'label_color' => 'success',
+        ],
+      
 
 
         // [
@@ -372,21 +394,28 @@ return [
         //     ],
         // ],
         ['header' => 'labels'],
+
         [
-            'text'       => 'Aviso ',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text'        => 'Visão Geral',
+            'url'         => 'nav/visaogeral',
+            'icon'        => 'far fa-eye',
+            'label_color' => 'success',
         ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        // [
+        //     'text'       => 'Aviso ',
+        //     'icon_color' => 'red',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'warning',
+        //     'icon_color' => 'yellow',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'information',
+        //     'icon_color' => 'cyan',
+        //     'url'        => '#',
+        // ],
     ],
 
     /*
