@@ -35,14 +35,14 @@
 
 # Mudanças no Projeto 03/06/2023
 
-- README.md
-- app/Console/Kernel.php
-- app/Http/Controllers/VisaoGeralController.php
-- public/vendor/adminlte/dist/css/adminlte.css.map
-- public/vendor/adminlte/dist/css/adminlte.min.css.map
-- resources/views/nav/equipamentos.blade.php
-- resources/views/nav/visaogeral.blade.php
-- routes/web.php    
+- `README.md`
+- `app/Console/Kernel.php`
+- `app/Http/Controllers/VisaoGeralController.php`
+- `public/vendor/adminlte/dist/css/adminlte.css.map`
+- `public/vendor/adminlte/dist/css/adminlte.min.css.map`
+- `resources/views/nav/equipamentos.blade.php`
+- `resources/views/nav/visaogeral.blade.php`
+- `routes/web.php`    
 
 ## A função schedule é responsável por agendar e executar o ping em uma lista de equipamentos a cada três minutos. 
 
@@ -82,3 +82,4 @@ protected function schedule(Schedule $schedule): void
 }
 ``` 
 Este código utiliza a biblioteca Schedule para agendar a verificação de ping em equipamentos específicos. A cada três minutos, o código executa um ping em cada equipamento, verifica o resultado do ping e atualiza o status no banco de dados. O log de saída do ping é registrado para fins de monitoramento e solução de problemas.
+
