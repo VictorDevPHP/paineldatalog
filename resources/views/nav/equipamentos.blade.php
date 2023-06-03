@@ -80,20 +80,21 @@
         </thead>
         <tbody>
             @foreach ($equipamentos as $equipamento)
-                <tr>
-                    <td>{{ $equipamento->id }}</td>
-                    <td>{{ $equipamento->nome }}</td>
-                    <td>{{ $equipamento->ip }}</td>
-                    <td>{{ $equipamento->versao_protocolo }}</td>
-                    <td>{{ $equipamento->status }}</td>
-                    <td class="acoes">
-                        <a href="{{ $equipamento->ip }}" title="Configuração do equipamento"
-                            alt="Configuração do eqipamento" class="btn">
-                            <i class="far fa-eye"></i>
-                        </a>
-                    </td>
-                </tr>
-            @endforeach
+            <tr>
+                <td>{{ $equipamento->id }}</td>
+                <td>{{ $equipamento->nome }}</td>
+                <td>{{ $equipamento->ip }}</td>
+                <td>{{ $equipamento->versao_protocolo }}</td>
+                <td class="@if ($equipamento->status === 'Comunicando') text-success @elseif ($equipamento->status === 'Não comunicando') text-danger @endif">
+                    {{ $equipamento->status }}
+                </td>
+                <td class="acoes">
+                    <a href="{{ $equipamento->ip }}" title="Configuração do equipamento" alt="Configuração do eqipamento" class="btn">
+                        <i class="far fa-eye"></i>
+                    </a>
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
     <div class="mb-3">

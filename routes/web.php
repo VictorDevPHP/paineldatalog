@@ -30,6 +30,7 @@ Route::get('/nav/logevents', [LogeventController::class, 'index'])->name('logeve
 Route::get('/nav/datalogs', [DatalogController::class, 'index'])->name('datalogs');
 
 Route::get('/nav/visaogeral', [VisaoGeralController::class, 'index'])->name('visaogeral');
+Route::get('/realizar-ping', [VisaoGeralController::class, 'realizarPing']);
 
 Route::get('/nav/painelconf', [PainelconfController::class, 'index'])->name('painelconf');
 
@@ -41,3 +42,5 @@ Route::get('/equipamentos/nao-comunicantes', [EquipamentosController::class, 'ge
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
