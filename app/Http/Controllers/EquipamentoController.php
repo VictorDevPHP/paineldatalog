@@ -6,11 +6,11 @@ use App\Models\Equipamentos;
 use Illuminate\Http\Request;
 
 class EquipamentoController extends Controller
-{   
-    
+{
+
     public function index()
     {
-        
+
         $equipamentos = Equipamentos::all();
 
         return view('nav.equipamentos', compact('equipamentos'))
@@ -34,12 +34,4 @@ class EquipamentoController extends Controller
         return redirect()->back()->with('success', 'Equipamento cadastrado com sucesso!');
     }
 
-      public function getNaoComunicantes(Request $request)
-    {
-        // Lógica de ping para determinar os equipamentos não comunicantes
-        // Contagem dos equipamentos não comunicantes
-        $naoComunicantesCount = Equipamentos::where('status', 'offline')->count();
-
-        return response()->json(['count' => $naoComunicantesCount]);
-    }
 }

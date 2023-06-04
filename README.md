@@ -1,4 +1,5 @@
-# Mudanças no Projeto 03/06/2023
+<details>
+  <summary>Mudanças no Projeto 03/06/2023</summary>
 
 ## Arquivos Deletados
 - `app/Http/Controllers/CurrencyApiServiceController.php`
@@ -32,6 +33,10 @@
 - `public/vendor/adminlte/dist/css/adminlte.min.css`
 - `resources/views/home.blade.php`
 - `routes/web.php`
+</details>
+
+<details>
+  <summary>Mudanças no Projeto 03/06/2023</summary>
 
 # Mudanças no Projeto 03/06/2023
 
@@ -83,3 +88,13 @@ protected function schedule(Schedule $schedule): void
 ``` 
 Este código utiliza a biblioteca Schedule para agendar a verificação de ping em equipamentos específicos. A cada três minutos, o código executa um ping em cada equipamento, verifica o resultado do ping e atualiza o status no banco de dados. O log de saída do ping é registrado para fins de monitoramento e solução de problemas.
 
+<details>
+     <summary>Mudanças no Projeto 03/06/2023</summary>
+
+## Arquivos Modificados
+
+- `README.md`
+- `app/Http/Controllers/EquipamentoController.php`
+- `app/Http/Controllers/VisaoGeralController.php`
+- `resources/views/nav/visaogeral.blade.php`
+</details>
