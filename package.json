@@ -18,6 +18,8 @@
         "admin-lte": "3.2",
         "bootstrap-css": "^4.0.0-alpha.5",
         "bootstrap-icons": "^1.10.5",
-        "material-icons": "^1.13.7"
+        "chart.js": "^4.3.0",
+        "material-icons": "^1.13.7",
+        "moment": "^2.29.4"
     }
 }

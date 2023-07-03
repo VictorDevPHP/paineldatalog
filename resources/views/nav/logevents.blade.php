@@ -32,6 +32,9 @@
             @endforeach
         </select>
     </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" onclick="exportarLogs()">Exportar CSV</button>
+    </div>
 
     <table id="log_events" class="table table-striped" style="width:100%">
         <thead>
@@ -52,3 +55,10 @@
         </tbody>
     </table>
 @endsection
+<script>
+    function exportarLogs() {
+        var equipamentoId = $('#selectEquipamento').val();
+        var url = '/logs/export?equipamentoId=' + equipamentoId;
+        window.location.href = url;
+    }
+</script>

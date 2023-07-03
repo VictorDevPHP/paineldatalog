@@ -322,7 +322,7 @@ return [
         [
             'text'        => 'Painel de Configuração',
             'url'         => 'nav/painelconf',
-            'icon'        => 'fas fa-charging-station',
+            'icon'        => 'fas fa-wrench',
             'label_color' => 'success',
         ],
        
@@ -331,7 +331,7 @@ return [
         [
             'text'        => 'Log De Eventos',
             'url'         => 'nav/logevents',
-            'icon'        => 'fas fa-fw fa-share',
+            'icon'        => 'far fa-folder-open',
             'label_color' => 'success',
         ],
 
@@ -355,50 +355,34 @@ return [
         //     'url'  => 'admin/settings',
         //     'icon' => 'fas fa-fw fa-lock',
         // ],
-        // [
-        //     'text'    => 'multilevel',
-        //     'icon'    => 'fas fa-fw fa-share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'level_one',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'level_two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'level_two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //     ],
-        // ],
+        [
+            'text'    => 'Dados Equipamentos',
+            'icon'    => 'fal fa-wave-triangle',
+            'submenu' => [
+                [
+                    'text' => 'Equipamento 1',
+                    'url'  => 'nav/equipamentos/equipamento1',
+                ],          
+
+                [
+                    'text' => 'Equipamento 2',
+                    'url'  => 'nav/equipamentos/equipamento2',
+                ],
+            ],
+        ],
         ['header' => 'labels'],
 
         [
             'text'        => 'Visão Geral',
             'url'         => 'nav/visaogeral',
             'icon'        => 'far fa-eye',
+            'label_color' => 'success',
+        ],
+
+        [
+            'text'        => 'Graficos',
+            'url'         => 'nav/graficos',
+            'icon'        => 'fas fa-chart-bar',
             'label_color' => 'success',
         ],
         // [

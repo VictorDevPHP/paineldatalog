@@ -17,6 +17,11 @@ class Equipamentos extends Model
     {
         return $this->belongsTo(OutroModelo::class);
     }
+
+    public function datalogs()
+    {
+        return $this->hasMany(Datalog::class, 'id_equipamento');
+    }
     public $timestamps = false;
 
 }

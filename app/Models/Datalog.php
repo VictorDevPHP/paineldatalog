@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Model;
 
 class Datalog extends Model
@@ -24,5 +25,17 @@ class Datalog extends Model
     public function algumRelacionamento()
     {
         return $this->belongsTo(OutroModelo::class);
+    }
+
+    public function equipamento()
+    {
+        return $this->belongsTo(Equipamentos::class, 'id');
+    }
+
+    public static function getLatestBatteryCapacity($equipamentoId)
+    {
+        return Datalog::where('id_equipamento', $equipamentoId)
+            ->orderBy('data_hora', 'desc')
+            ->value('Battery_capacity');
     }
 }

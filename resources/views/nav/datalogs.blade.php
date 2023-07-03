@@ -58,11 +58,12 @@
                     <td>{{ date('d/m/Y H:i:s', strtotime($data_log->data_hora)) }}</td>
                     <td>
                         {{
-                            gmdate('d', $data_log->Uptime) . ' dias, ' .
-                            gmdate('H', $data_log->Uptime) . ' horas, ' .
-                            gmdate('i', $data_log->Uptime) . ' minutos'
+                            gmdate('d', intval($data_log->Uptime)) . ' dias, ' .
+                            gmdate('H', intval($data_log->Uptime)) . ' horas, ' .
+                            gmdate('i', intval($data_log->Uptime)) . ' minutos'
                         }}
                     </td>
+                    
                     <td class="acoes">
                         <a href="{{ $data_log->ip }}" title="Configuração do data_log" alt="Configuração do equipamento"
                             class="btn">
