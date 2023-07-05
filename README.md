@@ -1,7 +1,8 @@
+![gif](public/gif.gif)
+
 <details>
   <summary>Mudanças no Projeto 03/06/2023</summary>
 
-![gif](public/gif.gif)
 
 ## Arquivos Deletados
 - `app/Http/Controllers/CurrencyApiServiceController.php`
