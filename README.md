@@ -1,6 +1,8 @@
 <details>
   <summary>Mudanças no Projeto 03/06/2023</summary>
 
+![gif](public/gif.gif)
+
 ## Arquivos Deletados
 - `app/Http/Controllers/CurrencyApiServiceController.php`
 - `public/vendor/adminlte/dist/css/adminlte.css`
