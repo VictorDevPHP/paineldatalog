@@ -171,3 +171,4 @@ $schedule->call(function () {
         require base_path('routes/console.php');
     }
 }
+// 
