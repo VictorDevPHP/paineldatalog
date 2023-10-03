@@ -152,13 +152,13 @@ $schedule->call(function () {
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         // // Tarefa para criar backup do banco de dados
-        // $backupDirectory = storage_path('app\database');
-        // $backupFileName = 'backup.sql';
-        // $backupFilePath = $backupDirectory . '/' . $backupFileName;
+        $backupDirectory = storage_path('app\database');
+        $backupFileName = 'backup.sql';
+        $backupFilePath = $backupDirectory . '/' . $backupFileName;
 
-        // $schedule->exec("mysqldump --user=" . env('DB_USERNAME') . " --password=" . env('DB_PASSWORD') . " --host=" . env('DB_HOST') . " " . env('DB_DATABASE') . " > $backupFilePath")
-        //     ->everyMinute()
-        //     ->runInBackground();
+        $schedule->exec("mysqldump --user=" . env('DB_USERNAME') . " --password=" . env('DB_PASSWORD') . " --host=" . env('DB_HOST') . " " . env('DB_DATABASE') . " > $backupFilePath")
+            ->everyMinute()
+            ->runInBackground();
 
         // Log::info('Rotina de backup agendada com sucesso.');
 
